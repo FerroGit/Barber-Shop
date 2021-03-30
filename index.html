@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Barber Shop</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,100;1,300&display=swap" rel="stylesheet"><!-- GOOGLE FONT MONSERRAT TESTO -->
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> <!--  GOOGLE FONT LOBSTER -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> <!-- FONT AWESOME -->
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script> <!-- VUE -->
+</head>
+<body>
+
+    
+    <div id="app">
+
+                    <!--  Header  -->
+        <header v-for= "(element, index) in header">
+            <!-- nav bar -->
+            <nav>
+                <img :src="element.logo" alt="logo">
+
+                <div class="shop-burger">
+                    <i :class="element.shopping" @dblclick="resetCounter()"></i>
+                    <div class="counter">
+                        {{count}}
+                    </div>
+                    <div class="burger"  @click="drop = !drop">
+                        <div class="drop"></div>
+                        <div class="drop"></div>
+                        <div class="drop"></div>
+                    </div>
+                    <ul class="dropdown" v-if="drop">
+                        <li v-for="contact in dropdown">
+                            <a href="">{{contact}}</a>
+                        </li>     
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- jumbotron -->
+            <section class="jumbo">
+                <div id="jumbo-decription">
+                    <h1>{{element.title}}</h1>
+                    <div id="line"></div>
+                    <p>{{element.subtitle}}</p>
+                    <span id="button">{{element.button}}</span>
+                </div>
+
+                <div class="conainer-img_jumbo">
+                    <img :src="element.img" alt="barber-and-client.png">
+                </div>
+
+                <div class="white_minibox">
+                    <div id="minibox">
+                        <i :class="element.folder"></i>
+                        <span>{{element.span_1}}</span>
+                    </div>
+                    <div id="minibox">
+                        <div class="price">
+                            <span id="dollar">{{element.dollar}}</span><span id="trentanove"><strong>{{element.price}}</strong></span>
+                        </div>
+                        <span>{{element.span_2}}</span>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+
+                    <!--  Main  -->
+        <main>
+            <!-- awards -->
+            <section class="awards">
+                <div class="container-awards">
+                    <p>Award Winning</p>
+                    <h2>pro barbers</h2>
+                    <span id="button"> meet your new barber</span>
+                </div>
+
+                <div class="triangle-up"></div>
+            </section>
+
+            <!-- services -->
+            <section class="services">
+                <div class="upper-text">
+                    <span>mens grooming</span>
+                    <h2>services</h2>
+                </div>
+                <div class="container-services">
+
+                    <div class="box-service" id="razer">
+                        <img src="img/avadabarbers-trimcut-icon-before.png" alt="razer">
+                        <h3>trim e cut</h3>
+                        <p>Avada Barbers are experts in the lickety split trim and hair cut. Quick but careful and ridcusly good looking.</p>
+                    </div>
+                    <div class="box-service" id="soap">
+                        <img src="img/avadabarbers-washndry-icon.png" alt="soap">
+                        <h3>wash e dry</h3>
+                        <p>Take a seat io our fine leather chairs lean back and let us lather you fresh head in luxorious fashion.</p>
+                    </div>
+                    <div class="box-service" id="beard">
+                        <img src="img/avadabarbers-beardtrim-icon.png" alt="beard">
+                        <h3>beard tidy</h3>
+                        <p>Tame the tangles and unitidy facial airs like a gentleman with our Bead Tidy services from Avada Barbers.</p>
+                    </div> 
+                </div>
+
+                <div class="container-button_services">
+                    <span id="button">read about our services</span>
+                </div>
+
+                <div id="triangle_black" class="triangle-up"></div>
+            </section>
+
+            <!-- products -->
+            <section class="products">
+
+                <div class="upper-text">
+                    <span>You Have covered</span>
+                    <h2>avada grooming products</h2>
+                </div>
+                <div class="container-products" tabindex="10" @keydown.right="nextImg" @keydown.left='prevImg'>
+                    <div class="carousel">
+                        <i class="fas fa-arrow-left" @click="prevImg"></i>
+                        <div v-for="(item, index) in carousel" :class="active(index)">
+                            <div v-for="element in carousel[indexCarousel].dettagli">
+                                <img :src="element.img" alt="product">
+                                <h3>{{element.name}}</h3>
+                                <span>{{element.price}}</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-arrow-right" @click="nextImg"></i>
+                    </div>
+                </div>
+                <span id="button" @click="incrementCounter()">shop our product range</span>
+            </section>
+
+            <!-- review -->
+            <section class="review">
+
+                <div class="container_absolute">
+                    <div class="bg-absolute">
+                        <img src="img/shaving_butter-200x200.png" alt="">
+                    </div>
+                    <div class="text-absolute">
+                        <span>this months featured product</span>
+                        <h2>shaving butter</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, atque, illum natus eos dicta alias doloremque </p>
+                        <span id="button">buy now</span>
+                    </div>
+                </div>
+
+                    <div class="text-review">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sit rerum beatae dolor voluptatum fugit repudiandae</p>
+                        <img src="img/avadabarbers-trimcut-gallery7-200x201.jpg" alt="">
+                        <span>jon doe</span>
+                    </div>
+                    <div class="text-review">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sit rerum beatae dolor voluptatum fugit repudiandae</p>
+                        <img src="img/avadabarbers-trimcut-gallery6-200x200.jpg" alt="">
+                        <span>pete jones</span>
+                    </div>
+                    <div class="text-review">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sit rerum beatae dolor voluptatum fugit repudiandae</p>
+                        <img src="img/avadabarbers-trimcut-gallery3-200x201.jpg" alt="">
+                        <span>mark philips</span>
+                    </div>
+            </section>
+
+            <!-- blog -->
+            <section class="blog">
+                <div class="triangle-bottom"></div>
+                <div class="blog-title">
+                    <span>tales from the barber shop</span>
+                    <h2>recent blog posts</h2>
+                </div>
+
+                <div class="blog-img">
+                    <div class="container-img_blog">
+                        <img src="img/avadabarbers-second-blog-320x202.jpg" alt="">
+                        <h3>Avada Barbers now open</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque harum tempore unde, aliquam aspernatur error iure doloremque quam architecto. Quis ut corrupti</p>
+                    </div>
+                    <div class="container-img_blog">
+                        <img src="img/avadabarbers-choosing-blog-320x202.jpg" alt="">
+                        <h3>choosing the right barber</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque harum tempore unde, aliquam aspernatur error iure doloremque quam architecto. Quis ut corrupti</p>
+                    </div>
+                    <div class="container-img_blog">
+                        <img src="img/avadabarbers-ourservice-blog-320x202.jpg" alt="">
+                        <h3>quick service guide</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque harum tempore unde, aliquam aspernatur error iure doloremque quam architecto. Quis ut corrupti</p>
+                    </div>
+                </div>
+                <span id="button"> read more for our blog</span>
+            </section>
+        </main>
+
+
+                    <!--  Footer -->
+        <footer>
+            <!-- shop -->
+            <div class="shop" v-for="shoppo in shop">
+                <img  :src="shoppo.poster" alt="">
+                <span id="button">{{shoppo.button}}</span>
+            </div>
+
+            <!-- contact -->
+            <div class="contact" v-for="contacto in contact">
+                <img :src="contacto.poster" alt="logo">
+                <span>{{contacto.title}}</span>
+                <span>{{contacto.address}}</span>
+                <span>{{contacto.city}}</span>
+                <span>{{contacto.email}}</span>
+                <span>{{contacto.phone}}</span>
+                <p>Follow us</p>
+                <div class="box-social">
+                    <i v-for='social in socials' :class="social"></i>
+                </div>
+            </div>
+
+            <!-- appointment -->
+            <div class="appointment" v-for="appointmento in appointment">
+                <img  :src="appointmento.poster" alt="">
+                <span id="button">{{appointmento.button}}</span>
+            </div>
+        </footer>
+        <div class="copyright">
+            {{copyright}}
+        </div>
+
+
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>

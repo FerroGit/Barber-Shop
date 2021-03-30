@@ -1,0 +1,479 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+i{
+    cursor: pointer;}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+    max-height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Lobster', cursive;
+}
+#button{
+    padding: 10px 15px;
+    color:#ae8652;
+    border: 1px solid #ae8652;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#button:hover {
+    transition: 0.2s;
+    transform: scale(1.1);
+}
+/* HEADER */
+header{
+    padding: 20px 0 50px;
+    background-image: url("../img/avadabarbers-homepage-hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* navbar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20%;
+    color: #b0b0b0;
+}
+nav img{
+    width: 150px;
+}
+.shop-burger{
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+.shop-burger i:hover{
+    transition: 0.2s;
+    color: white;
+    transform: scale(1.1);
+}
+.burger:hover .drop{
+    transition: 0.2s;
+    border: 2px solid white;
+}
+.counter{
+    position: absolute;
+    top: -20px;
+    padding: 5px;
+    font-size: 0.9rem;
+    border-radius: 25%;
+    color: #ae8652;
+}
+.counter:hover{
+    text-decoration: underline;
+    
+}
+.burger div{
+    margin: 4px 0px 4px 10px;
+    width: 25px;
+    border: 2px solid #b0b0b0;
+}
+.dropdown{
+    position: absolute;
+    width: 150px;
+    bottom: -175px;
+    right: -145px;
+    padding: 10px;
+    font-size: 1.2rem;
+    background: rgba(146, 146, 146, 0.103);
+    border: 1px solid #ff910011;
+    border-radius: 10px;
+    list-style: none;
+}
+.dropdown li {
+    padding: 5px;
+}
+.dropdown a{
+    color:  #979797;
+    width: 100px;
+    font-size: 1.2rem;
+    padding-left: 10px
+}
+.dropdown li:hover a{
+    transition: 0.2s;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 20px;
+    border-left: 2px solid #ae8652;
+}
+
+/* jumbo section */
+.jumbo{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20%;
+}
+#jumbo-decription{
+    margin: 20% 0 0;
+}
+#jumbo-decription h1{
+    padding: 20px 0;
+    font-size: 6.5rem;
+    color: #eae8e6;
+}
+#line{
+    width: 250px;
+    height: 2px;
+    border: 1px solid #ae8652;
+    border-radius: 50px;
+}
+#jumbo-decription p{
+    padding: 20px 0 30px;
+    color: #505050;
+    text-transform: capitalize;
+}
+.white_minibox{
+    display: flex;
+    flex-direction: column;
+}
+#minibox{
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    font-size: 0.8rem;
+    text-align: center;
+    color:#383d6d;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.fa-folder-plus{
+    padding-top: 5px;
+    font-size: 1.5rem;
+}
+.price{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: rgb(5, 184, 5);
+}
+#dollar{
+    font-size: 0.7rem;
+}
+#trentanove{
+    font-size: 1.5rem;
+}
+
+
+/* awards */
+.awards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 70px 50px 0 50px;
+    background-image: url("../img/avadabarbers-about-introbackground.jpg");
+    background-position: top;
+    background-size: cover;
+    background-repeat: repeat;
+}
+.awards,
+.upper-text span{
+    color: #ae8652;
+    text-transform: uppercase;
+}
+.awards h2,
+.upper-text h2{
+    padding: 20px 0 30px 0;
+    font-size: 5rem;
+    color: #b0b0b0;
+    text-transform: capitalize;
+}
+.triangle-up{
+    margin-top: 100px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 49vw 100px 49vw;
+    border-color: transparent transparent #ffffff transparent;
+}
+
+/* secrivices */
+.services{
+    text-align: center;
+}
+.upper-text{
+    text-align: center;
+    padding: 50px 0 50px 0 ;
+}
+.container-services{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 20%;
+    padding-bottom: 60px;
+}
+.container-services img{
+    width: 100px;
+    max-height: 140px;
+}
+.box-service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+}
+.box-service h3{
+    padding: 25px 0;
+    font-size: 2.2rem;
+    color: #ae8652;
+    text-transform: capitalize;
+}
+.box-service p{
+    text-align: center;
+    color: #818181;
+}
+#soap h3{
+    padding: 35px 0 25px 0 ;
+}
+.container-button_services{
+    text-align: center;
+}
+#triangle_black{
+    border-color: transparent transparent #141414 transparent;
+}
+
+/* products & carousel */
+.products{
+    text-align: center  ;
+    background-image: url("../img/avadabarbers-reviewsbackground.jpg");
+    background-size: cover;
+    background-position: top;
+    padding-bottom: 200px;
+}
+.container-products{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 150px;
+    cursor: pointer;
+}
+.carousel span{
+    font-size: 1.3rem;
+    color: #ae8652;
+}
+.carousel{
+    display: flex;
+    align-items: center;
+    padding: 100px;
+} 
+.carousel div{
+    padding: 30px;
+}
+.carousel h3{
+    padding: 50px 0;
+    font-size: 3.5rem;
+    color: #ae8652;
+}
+.carousel i {
+    font-size: 3rem;
+    color: #fff;
+}
+.carousel img{
+    width: 400px;
+}
+.active{
+    display: block;
+}
+.none{
+    display: none;
+}
+
+
+/* review */
+.review{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 25%;
+}
+.container_absolute{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: -40px;
+    height: 400px;
+    border-top: 4px solid #ae8652;
+    background: #111110;
+}
+.bg-absolute{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url("../img/avadabarbers-cta-background.jpg");
+    background-size: cover;
+}
+.bg-absolute img{
+    width: 300px;
+}
+.text-absolute{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 20px; 
+}
+.text-absolute span{
+    color: #ae8652;
+    text-transform: uppercase;
+}
+.text-absolute h2{
+    font-size: 5rem;
+    color:#b0b0b0;
+    text-transform: capitalize;
+}
+.text-absolute p{
+    padding: 20px 0 30px;
+    color: #818181;
+}
+.text-review{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 500px 0 100px ;
+}
+.text-review p{
+    max-width: 200px;
+    color: #b0b0b0;
+    word-spacing: 5px;
+}
+.text-review img{
+    border-radius: 50%;
+    width: 100px;
+    margin: 20px 0 10px;
+}
+.text-review span{
+    color: #ae8652;
+    text-transform: capitalize;
+}
+
+/* blog */
+.blog{
+    background: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+}
+.triangle-bottom{                    
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 100px 49vw 0 49vw;
+    border-color: #ffffff transparent transparent transparent;
+}
+.blog-title{
+    text-align: center;
+    margin-top: 100px;
+}
+.blog-title span{
+    padding-bottom: 30px;
+    color: #ae8652;
+    text-transform: uppercase;
+}
+.blog-title h2{
+    color: #b0b0b0;
+    font-size: 5.5rem;
+    text-transform: capitalize;
+}
+.blog-img{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 10%;
+}
+.container-img_blog{
+    text-align: center;
+    margin: 50px 10px 100px;
+}
+.container-img_blog h3{
+    padding: 10px 0;
+    font-size: 2rem;
+    color: #ae8652;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.container-img_blog p{
+    padding: 0 10%;
+    color: #b0b0b0;
+}
+
+/* footer */
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px 10% 50px;
+    background: #111110;
+}
+.shop,
+.contact,
+.appointment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.shop img,
+.appointment img{
+    width: 400px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.contact{
+    align-self: flex-start ;
+}
+.contact img {
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+.contact span{
+    margin: 5px;
+    color: #b0b0b0;
+    cursor: pointer;
+}
+.contact span:hover{
+    text-decoration: underline;
+}
+.contact p{
+    padding: 30px;
+    font-size: 1.2rem;
+    color: #ae8652;
+    text-transform: uppercase;
+}
+.box-social{
+    display: flex;
+}
+.box-social  i{
+    padding: 5px;
+    font-size: 1.2rem;
+    color: #b0b0b0;
+}
+.box-social i:hover{
+    transition: 0.2s;
+    color: #fff;
+    transform: scale(1.5);
+}
+
+/* copright */
+.copyright{
+    padding: 40px;
+    color: #b0b0b0;
+    background: rgb(23, 23, 23);
+    text-align: center;
+}
